@@ -23,6 +23,7 @@ a {
         left: 0;
         right: 0;
         background-color: #121f2f; 
+        z-index: 1000;
     }
 
     .container-nav {
@@ -78,41 +79,48 @@ a {
     }
 
     /* bagian home */
-    .home {
+
+    .slide-area {
+        /* margin: 100px auto; */
+        margin: 1% auto;    
         overflow: hidden;
-        width: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        height: 90%;
+        width: 90%;
     }
 
-    .edu-card {
+    .slide-card {
         display: flex;
         flex-direction: row;
         gap: 30px;
     }
 
-    .edu-card img {
-        width: 900px;
-        margin-left: 30px;
+    .slide-card a img {
+        height: 65%;
+        border-radius: 30px;
+        /* margin: -4.3% 3%; */
     }
 
-    
-    .edu-card img {
-        width: 900px;
-        margin-left: 30px;
-        border-radius: 8px;
-    }
-
-    .home img.edu-btn {
-        width: 40px;
-        height: 40px;
+    .slide-area img.slide-btn {
+        width: 3%;
         position: relative;
+        z-index: 10;
     }
 
-    .home .left {
-        left: 0px;
+    .slide-area img.slide-btn:hover {
+        filter: drop-shadow(0 0 20px var(--basecolor));
     }
 
-    .home .right {
-        right: 0px;
+    .slide-area .left {
+        top: 45%;
+        /* left: 2%; */
     }
+
+    .slide-area .right {
+        top: 45%;
+        /* left: 85%; */
+    }
+
 
 }
