@@ -78,5 +78,41 @@ a {
     }
 
     /* bagian home */
+    .home {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .edu-card {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .edu-card img {
+        width: 900px;
+        margin-left: 30px;
+    }
+
     
+    .edu-card img {
+        width: 900px;
+        margin-left: 30px;
+        border-radius: 8px;
+    }
+
+    .home img.edu-btn {
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .home .left {
+        left: 0px;
+    }
+
+    .home .right {
+        right: 0px;
+    }
+
 }
