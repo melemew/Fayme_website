@@ -44,31 +44,54 @@
     <main>
 
         <section class="home" id="home">
-        
-            <img src='image/angle-double-left.svg' class='edu-btn left'>
-            <div class='edu-card'>
-                
-                <a href='/SobatTani/seminar-page.html'>
-                    <img src='/SobatTani/image/SEMINAR.jpg' alt='card-1'>
-                </a>
-                <a href='/SobatTani/edu-page-1.html'>
-                    <img src='/SobatTani/image/targets.jpg' alt='card-2'>
-                </a>
-                <a href='/SobatTani/edu-page-2.html'>
-                    <img src='/SobatTani/image/Ramuan Pembasmi Hama Sawah yang Ampuh dan Ramah Lingkungan(1).png' alt='card-3'>
-                </a>
-                <a href='/SobatTani/edu-page-3.html'>
-                    <img src='/SobatTani/image/yang ke 3.png' alt='card-4'>
-                </a>
-                <a href='/SobatTani/edu-page-4.html'>
-                    <img src='/SobatTani/image/yang ke 4.png' alt='card-5'>
-                </a>
-                <a href='/SobatTani/edu-page-5.html'>
-                    <img src='/SobatTani/image/yang ke 5.png' alt='card-6'>
-                </a>
-                
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/SEMINAR.jpg" style="width:100%">
+                    <div class="text">Caption 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/targets.jpg" style="width:100%">
+                    <div class="text">Caption 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/Ramuan Pembasmi Hama Sawah yang Ampuh dan Ramah Lingkungan(1).png" style="width:100%">
+                    <div class="text">Caption 3</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/yang ke 3.png" style="width:100%">
+                    <div class="text">Caption 4</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/yang ke 4.png" style="width:100%">
+                    <div class="text">Caption 5</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/SobatTani/image/yang ke 5.png" style="width:100%">
+                    <div class="text">Caption 6</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <img src='image/angle-double-right.svg' class='edu-btn right'>
+
+            <br>
+
+            <div class="dotcr" style="text-align:center">
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+                <div class="dot" onclick="currentSlide(3)"></div>
+                <div class="dot" onclick="currentSlide(4)"></div>
+                <div class="dot" onclick="currentSlide(5)"></div>
+                <div class="dot" onclick="currentSlide(6)"></div>
+
+            </div>
 
         </section>
 
@@ -161,6 +184,8 @@
     <footer>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
