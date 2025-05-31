@@ -1,4 +1,5 @@
 let slideIndex = 1;
+let timeout;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -12,6 +13,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+
+    clearTimeout(timeout);
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
@@ -25,13 +28,7 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+    timeout = setTimeout(() => {
+        showSlides(++slideIndex)
+    }, 10000);
 }
-
-// auto jalan
-function lanjut() {
-    setInterval(() => {
-        plusSlides(1)
-    }, 5000);
-}
-
-lanjut();
