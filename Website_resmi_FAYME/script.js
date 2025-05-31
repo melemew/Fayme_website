@@ -31,7 +31,7 @@ function showSlides(n) {
 function lanjut() {
     setInterval(() => {
         plusSlides(1)
-    }, 10000);
+    }, 5000);
 }
 
 lanjut();
