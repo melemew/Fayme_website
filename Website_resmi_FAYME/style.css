@@ -37,6 +37,12 @@ a {
     .container-nav img {
         width: 130px;
         margin: 19px;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .container-nav img:hover {
+        filter: drop-shadow(0 0 5px #8f8f8f);
     }
 
     .container-nav ul {
@@ -48,13 +54,25 @@ a {
         margin: auto;
     }
 
+    .container-nav li {
+        transition: .3s;
+        border-radius: 10px;
+    }
+
+    .container-nav li:hover {
+        color: #b0b0b0;
+    }
+
     .langdiv {
         display: flex;
         margin: auto;
         gap: 5px;
+        cursor: pointer;
     }
 
-
+    .langdiv:hover * {
+        color: #b0b0b0;
+    }
 
 
 
@@ -93,13 +111,15 @@ a {
 
     .mySlides img {
         border-radius: 50px;
+        cursor: pointer;
     }
 
     .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
+    width: fit-content;
+    height: fit-content;
     margin-top: -20px;
     padding: 16px;
     color: black;
@@ -130,19 +150,22 @@ a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 15%;
+    bottom: 20%;
     width: max-content;
     z-index: 5;
     text-align: center;
+    cursor: default;
     }
 
     .dotcr {
-    position: relative;
+    display: none;
+    position: absolute;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    bottom: 150px;
-    left: 70%;
-    transform: translateX(-30%);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     }
 
     .dot {
