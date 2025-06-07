@@ -17,6 +17,40 @@ a {
 
 @media screen and (min-width: 1024px) {
 
+    /* bagian CS-Wa */
+    .cs-wa {
+        position: fixed;
+        border: 3px solid rgb(8, 144, 8);
+        background-color: rgb(20, 213, 20);
+        box-sizing: border-box;
+        border-radius: 30px;
+        width: 165px;
+        height: 45px;
+        z-index: 999;
+        bottom: 30px;
+        right: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cs-wa:hover {
+        cursor: pointer;
+    }
+
+    .cs-wa img {
+        width: 35px;
+    }
+
+    .cs-wa p {
+        font-size: 19px;
+        color: black;
+    }
+
     /* bagian header */
     header {
         position: fixed;
@@ -35,8 +69,8 @@ a {
     }
 
     .container-nav img {
-        width: 130px;
-        margin: 19px;
+        width: 70px;
+        margin: 15px 10px;
         transition: .3s;
         cursor: pointer;
     }
@@ -54,14 +88,14 @@ a {
         margin: auto;
     }
 
-    .container-nav li {
-        transition: .3s;
-        border-radius: 10px;
-    }
-
-    .container-nav li:hover {
-        color: #b0b0b0;
-    }
+    .container-nav ul a:hover {
+        color: rgb(255, 0, 0);
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+}
 
     .langdiv {
         display: flex;
@@ -98,8 +132,80 @@ a {
     }
 
     /* bagian home */
+    main section.home {
+        width: 100%;
+        padding: 0;
+        height: 634px;
+        margin-top: 83px;
+        box-sizing: border-box;
+        position: relative;
+        border: 0px;
+    }
 
-    .slideshow-container {
+    .home img {
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        width: 1571px;
+        height: 810px;
+        object-fit: fill;
+        animation: fade-home 2s;
+        -webkit-animation: fade-home 2s;
+    }
+
+    ul.array-gambar-promotion {
+        list-style: none;
+        margin: auto;
+        width: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+}
+
+    ul.array-gambar-promotion li {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        opacity: 0.7;
+        border: 3px solid white;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    ul.array-gambar-promotion li.warnaHitam-pPictures {
+        background-color: white;
+        border: 3px solid rgba(168, 9, 9, 0.838);
+        opacity: 1;
+    }
+
+    ul.array-gambar-promotion li:hover {
+        background-color: white;
+        /* border: 3px solid #16519a; */
+        border: 3px solid rgb(213, 149, 29);
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    ul.array-gambar-promotion li.warnaHitam-pPictures:hover {
+        background-color: white;
+        /* border: 3px solid #16519a; */
+        border: 3px solid rgb(213, 149, 29);
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    
+    
+    /* bagian about */
+    .slideshow1-container {
     max-width: 80%;
     position: relative;
     margin: auto;
@@ -158,14 +264,12 @@ a {
     }
 
     .dotcr {
-    display: none;
-    position: absolute;
-    width: fit-content;
+    position: relative;
     display: flex;
     flex-direction: row;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 150px;
+    left: 70%;
+    transform: translateX(-30%);
     }
 
     .dot {
@@ -187,6 +291,22 @@ a {
     .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+    }
+
+
+    @keyframes fade-home {
+        0% {
+            opacity: 0.5;
+            transition: 2s ease;
+            -webkit-transition: 2s ease;
+            -moz-transition: 2s ease;
+            -ms-transition: 2s ease;
+            -o-transition: 2s ease;
+            }
+        100% {
+            opacity: 1;
+            transition: 2s ease;
+        }
     }
 
     @keyframes fade {
