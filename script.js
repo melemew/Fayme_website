@@ -38,7 +38,7 @@ function showSlides(n) {
 
 // promotion-pictures { home } :
 const promotionPictures = document.querySelector("main section.home");
-const dataGambarPromosi = ["../Website_resmi_FAYME/img/oda-nobunaga1.jpg", "../Website_resmi_FAYME/img/oda_nobunaga2.jpg", "../Website_resmi_FAYME/img/oda_nobunaga3.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga4.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga5.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga6.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga7.jpeg"];
+const dataGambarPromosi = ["img/oda-nobunaga1.jpg", "img/oda_nobunaga2.jpg", "img/oda_nobunaga3.jpeg", "img/oda_nobunaga4.jpeg", "img/oda_nobunaga5.jpeg", "img/oda_nobunaga6.jpeg", "img/oda_nobunaga7.jpeg"];
 indexAwal(0);
 
 
