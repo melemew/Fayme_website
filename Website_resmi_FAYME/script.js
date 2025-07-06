@@ -1,51 +1,68 @@
 // promotion-pictures { home } :
 const promotionPictures = document.querySelector("main section.home");
-const dataGambarPromosi = ["../Website_resmi_FAYME/img/oda-nobunaga1.jpg", "../Website_resmi_FAYME/img/oda_nobunaga2.jpg", "../Website_resmi_FAYME/img/oda_nobunaga3.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga4.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga5.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga6.jpeg", "../Website_resmi_FAYME/img/oda_nobunaga7.jpeg"];
+ let stopInterval;
 
 
-window.addEventListener('click', (e) => {
+
+ambilData(0, 'data/promotionPictures.json');
+function ambilData(i, url) {
+    fetch(url)
+        .then(res => res.json())
+        .then(res => {
+
+             indexAwal(i, res);
+             mulaiP(i, res)
+
+        })
+}
+
+
+function mulaiP(i, dataGambarPromosi) {
+
+    promotionPictures.innerHTML = `<img src="${dataGambarPromosi[i]}" alt="">`;
+    buatIndexGambar(i, dataGambarPromosi);
+    let o = i
+    stopInterval = setInterval( () => {
+        if(o == dataGambarPromosi.length - 1) {
+            o = 0;
+            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            buatIndexGambar(o, dataGambarPromosi);
+        } else if (i == 0) {
+            o++
+            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            buatIndexGambar(o, dataGambarPromosi);
+        } else {
+            o++;
+            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            buatIndexGambar(o, dataGambarPromosi);
+        }      
+        
+    }, 2000)
+
+}
+    
+
+
+
+    window.addEventListener('click', (e) => {
     if (e.target.classList.contains('liCI')) {
         const showedIndexGambar = Number(e.target.dataset.id);
-        // console.log(showedIndexGambar);
 
-        // alert('hello');
-
-        // indexAwal(showedIndexGambar);
-        // langsungAja(showedIndexGambar);
-        // setI(showedIndexGambar);
+        ambilData(showedIndexGambar, 'data/promotionPictures.json');
+        clearInterval(stopInterval);
     }
 });
-indexAwal(0);
-
-
-
-// function langsungAja(i) {
-//     return promotionPictures.innerHTML = `<img src="${dataGambarPromosi[i]}" alt="">`;
-// }
-
-
-
-
-    let i = 1
-    setInterval( () => {
-        if(i == dataGambarPromosi.length) i = 0;
-            
-        promotionPictures.innerHTML = `<img src="${dataGambarPromosi[i]}" alt="">`;
-        buatIndexGambar(i);
-        i++;
-    }, 9000)
 
 
 // index promotion-pictures
 const arrayPromotionPictures = document.querySelector('ul.array-gambar-promotion');
 
-const buatIndexGambar = (showedIndexGambar) => {
+const buatIndexGambar = (showedIndexGambar, dataGambarPromosi) => {
     
     const indexGambar = [];
     for (let i = 0; i < dataGambarPromosi.length; i++) {
         indexGambar.push(`<li class="liCI" data-id="${i}"></li>`);
     }
-    // console.log(indexGambar.length);    
     
 
     let cetakIndex = '';
@@ -55,14 +72,12 @@ const buatIndexGambar = (showedIndexGambar) => {
         }
         cetakIndex += indexGambar[i];
     }
-    // console.log(cetakIndex);
-    
 
     return arrayPromotionPictures.innerHTML = cetakIndex;
 }
 
 
-function indexAwal(index) {
+function indexAwal(index, dataGambarPromosi) {
     const arrayPromotionPictures = document.querySelector('ul.array-gambar-promotion');
 
     const indexGambar = [];

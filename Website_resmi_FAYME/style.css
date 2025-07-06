@@ -209,20 +209,20 @@ a {
     main section.home {
         width: 100%;
         padding: 0;
-        height: 634px;
+        height: 506px;
         margin-top: 83px;
         box-sizing: border-box;
         position: relative;
-        border: 0px;
     }
 
     .home img {
         position: absolute;
         top: -20px;
-        left: -30px;
-        width: 1571px;
-        height: 810px;
-        object-fit: fill;
+        left: -20px;
+        width: 104%;
+        height: 544px;
+        /* object-fit: cover; */
+        /* border: 1px black; */
         animation: fade-home 2s;
         -webkit-animation: fade-home 2s;
     }
@@ -247,16 +247,13 @@ a {
         margin: auto;
         width: 100px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-direction: row;
+        gap: 5px;
         position: absolute;
-        bottom: 30px;
+        bottom: 2%;
         left: 50%;
         transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
 }
 
     ul.array-gambar-promotion li {
@@ -294,6 +291,7 @@ a {
 
     
     /* bagian about */
+
 
         .slideshow1-container {
             position: relative;
@@ -414,7 +412,6 @@ a {
 
 
     /* testimoni */
-
     .testimonicontent {
         display:flex;
         flex-direction: row;
@@ -424,4 +421,4 @@ a {
     .testimonicontent img {
         border:black solid 2px;
     }
-}
+} 
