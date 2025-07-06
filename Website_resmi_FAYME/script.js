@@ -48,7 +48,7 @@ function mulaiP(i, dataGambarPromosi) {
     if (e.target.classList.contains('liCI')) {
         const showedIndexGambar = Number(e.target.dataset.id);
 
-        ambilData(showedIndexGambar, 'data/promotionPictures.json');
+        ambilData(showedIndexGambar, 'https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/promotionPictures.json');
         clearInterval(stopInterval);
     }
 });
@@ -150,11 +150,11 @@ function buatUi(url) {
         document.querySelector('.parentslide').innerHTML = ui;
     })
 }
-buatUi('data/Keunggulanweb.json');
+buatUi('https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/Keunggulanweb.json');
 
 
 // Update slide list
-    fetch('data/Keunggulanweb.json')
+    fetch('https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/Keunggulanweb.json')
         .then(res => res.json())
         .then(res => {
             let currentIndex = 0;
