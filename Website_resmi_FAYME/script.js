@@ -37,7 +37,7 @@ function mulaiP(i, dataGambarPromosi) {
             buatIndexGambar(o, dataGambarPromosi);
         }      
         
-    }, 2000)
+    }, 9000)
 
 }
     
