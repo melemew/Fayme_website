@@ -4,7 +4,7 @@ const promotionPictures = document.querySelector("main section.home");
 
 
 
-ambilData(0, 'data/promotionPictures.json');
+ambilData(0, 'https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/promotionPictures.json');
 function ambilData(i, url) {
     fetch(url)
         .then(res => res.json())
