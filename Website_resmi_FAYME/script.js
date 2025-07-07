@@ -12,14 +12,15 @@ function ambilData(i, url) {
 
              indexAwal(i, res);
              mulaiP(i, res)
-
         })
 }
 
+function mulaiP(i, dataGambarPromosi) {
 
 function mulaiP(i, dataGambarPromosi) {
 
     promotionPictures.innerHTML = `<img class="bannerhome" src="${dataGambarPromosi[i]}" alt="">`;
+
     buatIndexGambar(i, dataGambarPromosi);
     let o = i
     stopInterval = setInterval( () => {

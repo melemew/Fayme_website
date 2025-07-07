@@ -211,7 +211,6 @@ a {
     main section.home {
         width: 100%;
         padding: 0;
-        /* height: 739px; */
         margin-top: 83px;
         box-sizing: border-box;
         position: relative;
@@ -225,6 +224,7 @@ a {
         /* object-fit: cover; */
         /* border: 1px black; */
         /* height: auto; */
+
         animation: fade-home 2s;
         -webkit-animation: fade-home 2s;
     }
@@ -256,10 +256,6 @@ a {
         left: 50%;
         bottom: 2%;
         transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
 }
 
     ul.array-gambar-promotion li {
