@@ -22,8 +22,8 @@ a {
     /* bagian CS-Wa */
     .cs-wa {
         position: fixed;
-        border: 3px solid #000;
-        background-color: #aaa;
+        border: 1px solid #000;
+        background-color:#25d366;
         box-sizing: border-box;
         border-radius: 30px;
         width: 165px;
@@ -46,7 +46,9 @@ a {
 
     .cs-wa img {
         width: 35px;
-    }
+        filter: invert();
+        -webkit-filter: invert();
+}
 
     .cs-wa p {
         font-size: 19px;
@@ -189,7 +191,7 @@ a {
 
     main section{
         height: auto;
-        border: 2px solid black;
+        /* border: 2px solid black; */
         box-sizing: border-box;
         overflow: hidden;
         text-align: center;
@@ -209,20 +211,20 @@ a {
     main section.home {
         width: 100%;
         padding: 0;
-        height: 506px;
         margin-top: 83px;
         box-sizing: border-box;
         position: relative;
     }
 
     .home img {
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        width: 104%;
-        height: 544px;
+        /* position: absolut */
+        width: 100%;
+        padding: 0;
+        /* margin-bottom: 1000000px; */
         /* object-fit: cover; */
         /* border: 1px black; */
+        /* height: auto; */
+
         animation: fade-home 2s;
         -webkit-animation: fade-home 2s;
     }
@@ -251,8 +253,8 @@ a {
         flex-direction: row;
         gap: 5px;
         position: absolute;
-        bottom: 2%;
         left: 50%;
+        bottom: 2%;
         transform: translateX(-50%);
 }
 

@@ -12,28 +12,29 @@ function ambilData(i, url) {
 
              indexAwal(i, res);
              mulaiP(i, res)
-
         })
 }
 
+function mulaiP(i, dataGambarPromosi) {
 
 function mulaiP(i, dataGambarPromosi) {
 
-    promotionPictures.innerHTML = `<img src="${dataGambarPromosi[i]}" alt="">`;
+    promotionPictures.innerHTML = `<img class="bannerhome" src="${dataGambarPromosi[i]}" alt="">`;
+
     buatIndexGambar(i, dataGambarPromosi);
     let o = i
     stopInterval = setInterval( () => {
         if(o == dataGambarPromosi.length - 1) {
             o = 0;
-            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            promotionPictures.innerHTML = `<img class="bannerhome" src="${dataGambarPromosi[o]}" alt="">`;
             buatIndexGambar(o, dataGambarPromosi);
         } else if (i == 0) {
             o++
-            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            promotionPictures.innerHTML = `<img class="bannerhome" src="${dataGambarPromosi[o]}" alt="">`;
             buatIndexGambar(o, dataGambarPromosi);
         } else {
             o++;
-            promotionPictures.innerHTML = `<img src="${dataGambarPromosi[o]}" alt="">`;
+            promotionPictures.innerHTML = `<img class="bannerhome" src="${dataGambarPromosi[o]}" alt="">`;
             buatIndexGambar(o, dataGambarPromosi);
         }      
         
