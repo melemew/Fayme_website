@@ -209,7 +209,7 @@ a {
     main section.home {
         width: 100%;
         padding: 0;
-        height: 506px;
+        height: 636px;
         margin-top: 83px;
         box-sizing: border-box;
         position: relative;
@@ -220,7 +220,7 @@ a {
         top: -20px;
         left: -20px;
         width: 104%;
-        height: 544px;
+        height: 684px;
         /* object-fit: cover; */
         /* border: 1px black; */
         animation: fade-home 2s;
@@ -249,9 +249,9 @@ a {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        gap: 5px;
+        gap: 6px;
         position: absolute;
-        bottom: 2%;
+        bottom: 3%;
         left: 50%;
         transform: translateX(-50%);
 }

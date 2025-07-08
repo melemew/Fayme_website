@@ -1,10 +1,10 @@
 // promotion-pictures { home } :
 const promotionPictures = document.querySelector("main section.home");
- let stopInterval;
+let stopInterval;
 
 
 
-ambilData(0, 'https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/promotionPictures.json');
+ambilData(0, 'Data/promotionPictures.json');
 function ambilData(i, url) {
     fetch(url)
         .then(res => res.json())
@@ -48,7 +48,7 @@ function mulaiP(i, dataGambarPromosi) {
     if (e.target.classList.contains('liCI')) {
         const showedIndexGambar = Number(e.target.dataset.id);
 
-        ambilData(showedIndexGambar, 'https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/promotionPictures.json');
+        ambilData(showedIndexGambar, 'Data/promotionPictures.json');
         clearInterval(stopInterval);
     }
 });
@@ -150,11 +150,11 @@ function buatUi(url) {
         document.querySelector('.parentslide').innerHTML = ui;
     })
 }
-buatUi('https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/Keunggulanweb.json');
+buatUi('Data/Keunggulanweb.json');
 
 
 // Update slide list
-    fetch('https://raw.githubusercontent.com/melemew/Fayme_website/refs/heads/main/Website_resmi_FAYME/Data/Keunggulanweb.json')
+    fetch('Data/Keunggulanweb.json')
         .then(res => res.json())
         .then(res => {
             let currentIndex = 0;
