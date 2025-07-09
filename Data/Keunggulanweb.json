@@ -16,5 +16,23 @@
         "img":"img/cepat-layanan.svg",
         "isian":"Desain responsif, tampil sempurna dan nyaman di semua perangkat, dari HP hingga desktop.",
         "kelas": "biru"
+    }, 
+    {
+        "caption":"Search Engine Optimization",
+        "img": "img/seo-layanan.svg",
+        "isian": "Website SEO friendly, mudah ditemukan dan siap mendongkrak bisnismu di Google.",
+        "kelas": "merah"
+    },
+    {
+        "caption":"Responsif",
+        "img": "img/responsif-layanan.svg",
+        "isian": "Cepat, rapih, dan langsung siap digunakan dengan performa optimal setelah launch.",
+        "kelas": "hijau"
+    },
+    {
+        "caption":"Cepat & Rapih after launch",
+        "img":"img/cepat-layanan.svg",
+        "isian":"Desain responsif, tampil sempurna dan nyaman di semua perangkat, dari HP hingga desktop.",
+        "kelas": "biru"
     }
 ]
