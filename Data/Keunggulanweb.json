@@ -1,32 +1,20 @@
 [
     {
-        "caption":"halo 1",
-        "img": "",
-        "isian": ""
+        "caption":"Search Engine Optimization",
+        "img": "img/seo-layanan.svg",
+        "isian": "Website SEO friendly, mudah ditemukan dan siap mendongkrak bisnismu di Google.",
+        "kelas": "merah"
     },
     {
-        "caption":"halo 2",
-        "img": "",
-        "isian": ""
+        "caption":"Responsif",
+        "img": "img/responsif-layanan.svg",
+        "isian": "Cepat, rapih, dan langsung siap digunakan dengan performa optimal setelah launch.",
+        "kelas": "hijau"
     },
     {
-        "caption":"halo 3",
-        "img":"",
-        "isian":""
-    },
-    {
-        "caption":"halo 3",
-        "img":"",
-        "isian":""
-    },
-    {
-        "caption":"halo 3",
-        "img":"",
-        "isian":""
-    },
-    {
-        "caption":"halo 3",
-        "img":"",
-        "isian":""
+        "caption":"Cepat & Rapih after launch",
+        "img":"img/cepat-layanan.svg",
+        "isian":"Desain responsif, tampil sempurna dan nyaman di semua perangkat, dari HP hingga desktop.",
+        "kelas": "biru"
     }
 ]

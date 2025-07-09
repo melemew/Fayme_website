@@ -134,17 +134,27 @@ const mundurser = document.querySelector('.prev');
 const parentser = document.querySelector('.parentslide');
 
 function buatUi(url) {
+    const slideN = document.querySelector('.next');
+    const slideP = document.querySelector('.prev');
+
     fetch(url)
     .then(response => response.json())
     .then(res => {
         let ui = '';
 
-        res.forEach(({img, caption, isian}) => {
+        if (res.length === 3) {
+            slideN.remove();
+            slideP.remove();
+        }
+
+        res.forEach(({img, caption, isian, kelas}) => {
             ui += `<div class="mySlides">
+                        <div class="img-layanan ${kelas}">
                             <img src="${img}">
-                            <h1>${caption}</h1>
-                            <div class="text">${isian}</div>
-                        </div>`
+                        </div>
+                        <h3>${caption}</h3>
+                        <p class="text-layanan">${isian}</p>
+                    </div>`
         })
 
         document.querySelector('.parentslide').innerHTML = ui;
@@ -155,34 +165,85 @@ buatUi('Data/Keunggulanweb.json');
 
 // Update slide list
     fetch('Data/Keunggulanweb.json')
-        .then(res => res.json())
-        .then(res => {
-            let currentIndex = 0;
-            const allSlides = parentser.querySelectorAll('.mySlides');
+    .then(res => res.json())
+    .then(res => {
+        let currentIndex = 0;
+        let slidesToShow = 3;
+        let intervalId;
 
-            function updateSlide() {
-                const slideWidth = allSlides[0].offsetWidth - 100;
-                parentser.style.transform = `translateX(-${currentIndex * (slideWidth*5)}px)`;
+        const slides = parentser.querySelectorAll('.mySlides');
+
+        // Fungsi untuk menentukan berapa slide tampil berdasarkan lebar layar
+        function updateSlidesToShow() {
+            if (window.innerWidth < 768) {
+                slidesToShow = 1;
+            } else if (window.innerWidth < 1024) {
+                slidesToShow = 2;
+            } else {
+                slidesToShow = 3;
             }
 
-            lanjutser.addEventListener('click', () => {
-                const slideIndex = res.length / 3;
-            
-                currentIndex++;
-                if (currentIndex >= slideIndex) {
-                    currentIndex = 0;
-                }
-                updateSlide();
-                });
-            
-            mundurser.addEventListener('click', () => {
-                const slideIndex2 = res.length - 2;
-            
-                currentIndex--;
-                if (currentIndex < 0) {
-                    currentIndex = allSlides.length - slideIndex2;
-                }
-                updateSlide();
+            // Update flex basis setiap slide
+            slides.forEach(slide => {
+                slide.style.flex = `0 0 ${100 / slidesToShow}%`;
+                slide.style.maxWidth = `${100 / slidesToShow}%`;
             });
 
-        })
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const slideWidth = slides[0].offsetWidth + 20; // gap 20
+            parentser.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function nextSlide() {
+            const maxIndex = slides.length - slidesToShow;
+            currentIndex++;
+            if (currentIndex > maxIndex) {
+                currentIndex = 0;
+            }
+            updateSlide();
+        }
+
+        function prevSlide() {
+            const maxIndex = slides.length - slidesToShow;
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = maxIndex;
+            }
+            updateSlide();
+        }
+
+        // Event tombol next & prev
+        lanjutser.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        mundurser.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        // Auto slide
+        function startAutoSlide() {
+            intervalId = setInterval(() => {
+                nextSlide();
+            }, 5000); // ganti setiap 5 detik
+        }
+
+        function resetAutoSlide() {
+            clearInterval(intervalId);
+            startAutoSlide();
+        }
+
+        // Jalankan pertama kali
+        updateSlidesToShow();
+        startAutoSlide();
+
+        // Update responsive saat resize
+        window.addEventListener('resize', () => {
+            updateSlidesToShow();
+        });
+    });
