@@ -38,6 +38,7 @@ a {
         align-items: center;
         justify-content: center;
         gap: 10px;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.7);
     }
 
     .cs-wa:hover {
@@ -195,6 +196,8 @@ a {
         box-sizing: border-box;
         overflow: hidden;
         text-align: center;
+        box-shadow: 5px #000000;
+        position: relative;
     }
 
     .home {
@@ -221,10 +224,6 @@ a {
         /* position: absolut */
         width: 100%;
         padding: 0;
-        /* margin-bottom: 1000000px; */
-        /* object-fit: cover; */
-        /* border: 1px black; */
-        /* height: auto; */
         animation: fade-home 2s;
         -webkit-animation: fade-home 2s;
     }
@@ -294,41 +293,56 @@ a {
     
     /* bagian about */
     section .container-about {
-        padding: 0 15px 15px 15px;
+        /* padding: 0 15px 15px 15px; */
+        padding: 0;
         /* border: 5px solid red; */
         box-sizing: border-box;
+        /* background-color: rgb(213, 213, 213); */
+    }
+
+    .about2 {
+        border-bottom: 5px solid white;
+        /* background-color: rgb(213, 213, 213); */
     }
 
     .container-about .layanan {
         padding: 0px 20px 20px 20px;
         margin-top: 0px;
-        height: 150px;
+        height: 120px;
         display: flex;
         justify-content: center;
     }
 
-        .slideshow1-container {
-            position: relative;
-            max-width: 63%;
-            margin: auto;
-            overflow: hidden;
-            /* background-color: #111; */
-        }
+    .slideshow1-container {
+        position: relative;
+        max-width: 63%;
+        margin: auto;
+        overflow: hidden;
+        /* background-color: #111; */
+    }
     
+    .parentslide {
+        display: flex;
+        /* padding: 20px 20px 20px 0px; */
+        transition: transform 0.5s ease-in-out;
+        gap: 20px;
+    }
+
     .mySlides {
         flex: 0 0 33.333%;
         /*default3slide*/max-width: 33.333%;
         padding: 15px 10px 10px 10px;
         border: 1px solid black;
         border-radius: 15px;
-}
-
-    .parentslide {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        gap: 20px;
     }
 
+    .first {
+        flex: 0 0 33.333%;
+        /*default3slide*/max-width: 33.333%;
+        padding: 15px 10px 10px 10px;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
 
     .img-layanan {
         width: 50px;
@@ -428,14 +442,119 @@ a {
 
 
     /* layanan digital */
-
-    .isilayanan {
-        display: inline-block;
-        border: black solid 1px;
-        width: 500px;
+    .layanan-digital {
+        background-color: white;
+        padding: 0px 20px 30px 20px;
+        position: relative;
+        height: 520px;
     }
 
+    .layanan-digital  h2 , .layanan-digital p {
+        z-index: 20;
+        position: relative;
+    }
 
+    .layanan-digital .isi {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .isilayanan {
+        text-align: left;
+        display: inline-block;
+        /*border: black solid 1px;
+        */box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.4);
+        width: 500px;
+        height: 320px;
+        /*height: 350px;
+        */border-radius: 20px;
+        box-sizing: border-box;
+        position: relative;
+        padding: 10px;
+        background-color: white;
+        transition: 1s ease;
+        z-index: 10;
+}
+
+    .isilayanan:hover {
+        scale: 1.1;
+        transition: .5s ease;
+}
+
+    .isilayanan div {
+        width: 100%;
+        height: 350px;
+        text-align: left;
+        padding: 0px;
+        z-index: 10;
+    }
+
+    .isilayanan div .anchor {
+        width: 200px;
+        height: 40px;
+        margin: 60px 37px 0 0;
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+    .isilayanan div .anchor2 {
+        /*margin-right: 50px;
+        */width: 200px;
+        height: 40px;
+        margin:  45px 37px 0 0;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+    .isilayanan div div {
+        width:200px;
+        height: 220px;
+        float: right; 
+        margin: 10px;
+    }
+
+    .isilayanan img {
+        width: 300px;
+        height: 260px;
+        /*float: right;*/
+        position: absolute;
+        bottom: 0px;
+        right: -55px;
+    }
+    
+    .isiL {
+        margin-right: 90px;
+    }
+
+    .layanan-digital .gelombang1 {
+        width: 102%;
+        z-index: 9;
+        padding: 0;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        /* margin-bottom: 1000px; */
+    }
+
+    .layanan-digital .gelombang2 {
+        width: 102%;
+        z-index: 0;
+        padding: 0;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        /* margin-bottom: 1000px; */
+    }
+    
 
 
 
@@ -448,13 +567,35 @@ a {
 
 
     /* testimoni */
-    .testimonicontent {
+    .isitest {
         display:flex;
         flex-direction: row;
         text-align: left;
+        height: 200px;
+    }
+
+    .isitest div * {
+        padding: 5px 0;
     }
 
     .testimonicontent img {
         border:black solid 2px;
+    }
+
+    .navtesti {
+        width: fit-content;
+        float: right;
+    }
+
+    .navtesti * {
+        display: inline;
+        cursor: pointer;
+    }
+
+
+
+
+    footer {
+        
     }
 } 

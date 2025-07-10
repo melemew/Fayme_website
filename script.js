@@ -147,8 +147,8 @@ function buatUi(url) {
             slideP.remove();
         }
 
-        res.forEach(({img, caption, isian, kelas}) => {
-            ui += `<div class="mySlides">
+        res.forEach(({img, caption, isian, kelas, kelas2}) => {
+            ui += `<div class="mySlides ${kelas2}">
                         <div class="img-layanan ${kelas}">
                             <img src="${img}">
                         </div>
@@ -193,7 +193,7 @@ buatUi('Data/Keunggulanweb.json');
         }
 
         function updateSlide() {
-            const slideWidth = slides[0].offsetWidth + 20; // gap 20
+            const slideWidth = slides[0].offsetWidth + 28; // gap 30
             parentser.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         }
 
@@ -247,3 +247,88 @@ buatUi('Data/Keunggulanweb.json');
             updateSlidesToShow();
         });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // bagian testimoni 
+    // Deklare
+
+    const isitest = [];
+    let indextesti = 0;
+    const parenttesti = document.querySelector('.testimonicontent')
+
+
+    function pulltesti(dex) {
+        fetch('Data/Testimoni.json')
+        .then(res => res.json())
+        .then(res => {
+            let hasil = [];
+            for (let o = 0; o < res.length; o++) {
+                hasil.push(`<div class="isitest">
+                    <img src="${res[o].img}" alt="">
+                    <div>
+                        <h4>${res[o].nama}</h4>
+                        <a src="${res[o].url}"><h5>${res[o].url}</h5></a>
+                        <p>${res[o].desk}</p>    
+                    </div>
+                </div>`);                
+            }
+
+
+            for (let i = 0; i < hasil.length; i += 3) {
+                const a = hasil[i] ?? "";
+                const c = hasil[i + 1] ?? "";
+                const e = hasil[i + 2] ?? "";
+
+                isitest.push(a + c + e);
+            }
+
+            showtesti(dex);
+        })
+    }
+
+    pulltesti(indextesti);
+
+
+    function showtesti(index) {
+        parenttesti.innerHTML = isitest[index];
+    }
+
+ // slide2an testimoni
+
+    const nexttesti = document.querySelector('.nexttesti');
+    const prevtesti = document.querySelector('.prevtesti');
+
+    nexttesti.addEventListener('click', () => {
+        if (indextesti === (isitest.length - 1)) {
+            indextesti = 0;
+        }else {
+            indextesti += 1;
+        }
+        
+        pulltesti(indextesti);
+    })
+
+    prevtesti.addEventListener('click', () => {
+        if (indextesti === 0) {
+            indextesti = isitest.length - 1;
+        }else {
+            indextesti -= 1;
+        }
+
+        pulltesti(indextesti);
+    })

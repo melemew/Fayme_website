@@ -3,7 +3,8 @@
         "caption":"Search Engine Optimization",
         "img": "img/seo-layanan.svg",
         "isian": "Website SEO friendly, mudah ditemukan dan siap mendongkrak bisnismu di Google.",
-        "kelas": "merah"
+        "kelas": "merah",
+        "kelas2": "first"
     },
     {
         "caption":"Responsif",
