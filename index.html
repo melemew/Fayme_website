@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="styleAnimation.css">
     <link rel="shortcut icon" href="img/Fayme-Corporation.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
         rel="stylesheet">
     <title>Beranda • Fayme Corporation</title>
 </head>
@@ -44,7 +45,7 @@
             <img src="img/Fayme-Corporation.png" alt="">
             <ul>
                 <li class="home-nav">
-                    <a href="index.html">Beranda</a>
+                    <a href="#home">Beranda</a>
                 </li>
                 <li class="about-nav">
                     <a href="#about">About</a>
@@ -68,9 +69,9 @@
 
     </header>
 
-    <main>
+    <main id="home">
 
-        <section class="home" id="home">
+        <section class="home" >
             
             <!-- <img src="img/oda-nobunaga1.jpg" alt=""> -->
             <!-- gambar dimunculin lewat js -->
@@ -87,7 +88,7 @@
 
                         <div>
                             <h2>Pembuatan Website</h2>
-                            <p>Menyediakan Pembuatan Website dan Nikmati website terjangkau dan efisien</p>
+                            <p>Menyediakan Jasa Pembuatan Website dengan Harga yang Terjangkau.</p>
                         </div>
 
                     </div>
@@ -103,33 +104,31 @@
                     </div>
 
                 </div>
-                
-            <br>
 
                 <div class="layanan-digital">
-                    <svg class="gelombang2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L16,170.7C32,181,64,203,96,213.3C128,224,160,224,192,197.3C224,171,256,117,288,133.3C320,149,352,235,384,240C416,245,448,171,480,133.3C512,96,544,96,576,117.3C608,139,640,181,672,192C704,203,736,181,768,149.3C800,117,832,75,864,69.3C896,64,928,96,960,112C992,128,1024,128,1056,112C1088,96,1120,64,1152,85.3C1184,107,1216,181,1248,229.3C1280,277,1312,299,1344,261.3C1376,224,1408,128,1424,80L1440,32L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z"></path></svg>
+                    <svg class="gelombang2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#121f2f" fill-opacity="1" d="M0,160L16,170.7C32,181,64,203,96,213.3C128,224,160,224,192,197.3C224,171,256,117,288,133.3C320,149,352,235,384,240C416,245,448,171,480,133.3C512,96,544,96,576,117.3C608,139,640,181,672,192C704,203,736,181,768,149.3C800,117,832,75,864,69.3C896,64,928,96,960,112C992,128,1024,128,1056,112C1088,96,1120,64,1152,85.3C1184,107,1216,181,1248,229.3C1280,277,1312,299,1344,261.3C1376,224,1408,128,1424,80L1440,32L1440,0L1424,0C1408,0,1376,0,1344,0C1312,0,1280,0,1248,0C1216,0,1184,0,1152,0C1120,0,1088,0,1056,0C1024,0,992,0,960,0C928,0,896,0,864,0C832,0,800,0,768,0C736,0,704,0,672,0C640,0,608,0,576,0C544,0,512,0,480,0C448,0,416,0,384,0C352,0,320,0,288,0C256,0,224,0,192,0C160,0,128,0,96,0C64,0,32,0,16,0L0,0Z"></path></svg>
                     <div><h2 class="h2">Website untuk Tiap Kebutuhan</h2>
-                    <p class="p">Website kami dirancang untuk penuhi Kebutuhan Anda</p>
+                    <p class="p">Website kami dirancang untuk penuhi Kebutuhan Anda.</p>
                     
                     <div class="isi">
 
-                        <div class="isilayanan isiL">
-                            <h1>Layanan - Custom Website</h1>
+                        <div class="isilayanan isiL reveal">
+                            <h1>Layanan - Custom Website | App</h1>
                             <div>
                                 <div><img src="img/promosiP3.jpg" alt=""></div>
                                 <p>Website yang dibuat sesuai fitur yang dibutuhkan & diinginkan oleh.</p>
                                 <!-- <img src="" alt=""> -->
-                                <div class="anchor"><a href="">Cek Selengkapnya</a></div>
+                                <div class="anchor"><a class="comingSoon" href="">Coming Soon..</a></div>
                             </div>
     
                         </div>
-                        <div class="isilayanan isiL2">
-                            <h1>Layanan - Template Website</h1>
+                        <div class="isilayanan isiL2 reveal">
+                            <h1>Layanan - Template Website | App</h1>
                             <div>
                                 <div><img src="img/promosiP1.jpg" alt=""></div>
                                 <p>Website yang dimana fitur-nya sudah tetap & hanya mengganti beberapa properti didalam Website.</p>
                                 <!-- <img src="" alt=""> -->
-                                <div class="anchor2"><a href="">Cek Selengkapnya</a></div>
+                                <div class="anchor2"><a class="templateW" href="">Cek Selengkapnya</a></div>
                             </div>
                         </div>
 
@@ -141,40 +140,43 @@
 
         <section class="services" id="service">
 
-            <h1>We Provide The Following Services:</h1>
+            <h1>We Provide The Following Services :</h1>
 
             <div class="servicecontent">
 
-                <div class="servicetype">
-                    <h3>Web Development</h3>
+                <div class="servicetype webdiv reveal">
+                    <img src="img/mari_buratei2.jpg" alt="">
                     <div>
-                        <img src="" alt="">
-                        <h4></h4>
-                        <p></p>
+                        <h3>Web Development</h3>
+                        <p>Web development adalah proses <span>membangun</span> website yang menarik, cepat, dan mudah digunakan — mulai dari tampilan hingga
+                        <span>fitur-fitur</span> di dalamnya.</p>
+                        <div class="anchorS"><a href="">Cek Selengkapnya</a></div>
                     </div>
                 </div>
-                <div class="servicetype">
-                    <h3>App Development</h3>
+                <div class="servicetype appdiv reveal">
                     <div>
-                        <img src="" alt="">
-                        <h4></h4>
-                        <p></p>
+                        <h3>App Development</h3>
+                        <p>App development adalah proses membuat <span>aplikasi mobile</span> yang fungsional dan user-friendly — mulai dari <span>desain tampilan
+                        hingga fitur-fitur</span> di dalamnya.
+                        Cocok untuk bisnis, layanan, atau ide digital yang ingin hadir langsung di <span>smartphone pengguna.</span></p>
+                        <div class="anchorS2"><a class="comingSoon2" href="">Coming Soon..</a></div>
                     </div>
+                    <img src="img/waguri.jpeg" alt="">
                 </div>
 
             </div>
         
         </section>
 
-        <section class="testimoni" id="testimoni">
+        <section class="testimoni2" id="testimoni">
 
-            <h1>Here Are Some Testimonials From our Clients:</h1>
+            <h1>Here Are Some Testimonials From our Clients :</h1>
             <div class="testimonicontent">
                 
             </div>
             <div class="navtesti">
-                <h1 class="prevtesti"><</h1>
-                <h1 class="nexttesti">></h1>
+                <div><h1 class="prevtesti"><</h1></div>
+                <div><h1 class="nexttesti">></h1></div>
             </div>
         </section>
 
@@ -185,10 +187,33 @@
     </main>
 
     <footer>
-        
+        <div class="">
+            <h4>ABOUT</h4>
+            <p>Fayme Corporation adalah perusahaan yang bergerak di bidang teknologi informasi (IT), dengan layanan utama seperti
+            pembuatan website, pengembangan aplikasi mobile, dan solusi digital berbasis kebutuhan klien.
+            Kami berkomitmen membantu bisnis dan organisasi memanfaatkan teknologi secara efektif untuk meningkatkan efisiensi, daya
+            saing, dan kehadiran digital mereka.</p>
+        </div>
+        <div>
+            <h4>FOLLOW US</h4>
+            <div class="logosodmed">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="img/linkedin.svg" alt="">
+                </a>
+                <!-- <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="img/email-.svg" alt="" srcset="">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"></a> -->
+            </div>
+        </div>
+        <div>
+
+        </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
 
 </body>
 </html>

@@ -125,8 +125,7 @@ cU.addEventListener('mouseover', () => {
 
 
 
-    //Slide Service
-
+//Slide Service
 // Declereny 
 const slideserv = document.querySelectorAll('.mySlides');
 const lanjutser = document.querySelector('.next');
@@ -252,83 +251,90 @@ buatUi('Data/Keunggulanweb.json');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-        // bagian testimoni 
+    // bagian testimoni 
     // Deklare
-
-    const isitest = [];
+    let isitest = '';
     let indextesti = 0;
-    const parenttesti = document.querySelector('.testimonicontent')
+    let testleng = 0;
+    const navtesti = document.querySelector('.navtesti');
+    const parenttesti = document.querySelector('.testimonicontent');
+    const nexttesti = document.querySelector('.nexttesti');
+    const prevtesti = document.querySelector('.prevtesti');
 
-
-    function pulltesti(dex) {
+    function pulltesti() {
         fetch('Data/Testimoni.json')
         .then(res => res.json())
         .then(res => {
-            let hasil = [];
             for (let o = 0; o < res.length; o++) {
-                hasil.push(`<div class="isitest">
-                    <img src="${res[o].img}" alt="">
+                isitest += `<div class="isitest">
+                    <img class="gambar" src="${res[o].img}" alt="">
                     <div>
-                        <h4>${res[o].nama}</h4>
-                        <a src="${res[o].url}"><h5>${res[o].url}</h5></a>
-                        <p>${res[o].desk}</p>    
+                        <h4>${res[o].perusahaan}</h4>
+                        <h5>${res[o].nama}</h5>
+                        <div class="komentar"><p><span>"</span> ${res[o].desk} <span>"</span></p></div>
+                        <a href="${res[o].url}" target="_blank">${res[o].src}</a>  
                     </div>
-                </div>`);                
+                    <!-- <img class="bookmark" src="img/bookmark.svg"> -->
+                </div>`;
+                testleng++;            
             }
 
-
-            for (let i = 0; i < hasil.length; i += 3) {
-                const a = hasil[i] ?? "";
-                const c = hasil[i + 1] ?? "";
-                const e = hasil[i + 2] ?? "";
-
-                isitest.push(a + c + e);
+            if (res.length === 1) {
+                navtesti.remove();
             }
 
-            showtesti(dex);
+            showtesti();
         })
     }
 
     pulltesti(indextesti);
 
 
-    function showtesti(index) {
-        parenttesti.innerHTML = isitest[index];
+    function showtesti() {
+        parenttesti.innerHTML = isitest;
     }
 
- // slide2an testimoni
+    
+    // slide2an testimoni
+    let intervaltesti;
+    function intervalT() {
+        intervaltesti = setInterval(() => {
+            if (indextesti === testleng - 1) {
+                indextesti = 0;
+            } else {
+                indextesti += 1;
+            }
 
-    const nexttesti = document.querySelector('.nexttesti');
-    const prevtesti = document.querySelector('.prevtesti');
+            updateSlide();
+        }, 8000);
+    }
+    intervalT();
+
+    function updateSlide() {
+        clearInterval(intervaltesti)
+        const slidetesti = document.querySelectorAll('.isitest');
+        const slideWidth = slidetesti[0].offsetWidth +20;
+        const offset = -indextesti * slideWidth;
+        parenttesti.style.transform = `translateX(${offset}px)`;
+        intervalT();
+    }
 
     nexttesti.addEventListener('click', () => {
-        if (indextesti === (isitest.length - 1)) {
+        if (indextesti === (testleng - 1)) {
             indextesti = 0;
         }else {
             indextesti += 1;
         }
         
-        pulltesti(indextesti);
+        updateSlide()
     })
 
     prevtesti.addEventListener('click', () => {
         if (indextesti === 0) {
-            indextesti = isitest.length - 1;
+            indextesti = testleng - 1;
         }else {
             indextesti -= 1;
         }
 
-        pulltesti(indextesti);
+        updateSlide()
     })

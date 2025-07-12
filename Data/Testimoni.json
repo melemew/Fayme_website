@@ -1,22 +1,30 @@
 [{
-    "nama":"Moza De Alfa",
-    "url":"Alfa.net",
-    "desk":"Beuh bikin website di fayme corporation sangat worth it, gw saranin di sini aj",
-    "img":""
+    "nama":"Oda Nobunaga",
+    "perusahaan":"Fate grand/order",
+    "src": "Typemoon.com",
+    "url":"https://typemoon.fandom.com/wiki/Oda_Nobunaga_(Archer)",
+    "desk":"Beuh bikin website di fayme corporation sangat worth it, gw saranin di sini aj, kalau enggak nanti aku kiss!",
+    "img":"img/myWife.jpeg"
 },{
-    "nama":"kon",
+    "nama":"Shiina Mahiru",
+    "perusahaan":"My Ayang",
+    "src": "typemoon.com",
     "url":"bas",
-    "desk":"anjay",
-    "img":""
+    "desk":"aku sayang fayme deh~ aku sayang ama mujahid, dan aku sayang juga nopal, aku juga sayang yazid",
+    "img":"img/5.jpg"
 },{
-    "nama":"kon",
+    "nama":"Mari Buratei",
+    "perusahaan":"Joshiraku",
+    "src": "typemoon.com",
     "url":"bas",
-    "desk":"anjay",
-    "img":""
+    "desk":"wacthaaaaaaa!!!",
+    "img":"img/mari buratei.webp"
 },{
-    "nama":"kon",
+    "nama":"Megumin",
+    "perusahaan":"Konosuba",
+    "src": "typemoon.com",
     "url":"bas",
-    "desk":"anjay",
-    "img":""
+    "desk":"explosion!!!",
+    "img":"img/MeguminHD.jpeg"
 }
 ]
